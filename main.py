@@ -42,7 +42,7 @@ while running:
 
 
     #viser poengsummen
-    text.text(screen, f"{score}", 10, 10, WHITE, BLACK)
+    text.text(screen, f"Score: {score}", 10, 10, BLACK, WHITE)
 
     pg.display.update()
 
