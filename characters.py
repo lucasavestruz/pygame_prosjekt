@@ -112,7 +112,11 @@ class EnemyManager:
     def update_enemies(self):
         for enemy in self.enemies:
             enemy.update()
-        self.enemies = [e for e in self.enemies if e.y < SCREEN_HEIGHT]
+            if enemy.y > SCREEN_HEIGHT:
+                return True
+        return False
+               
+        
     
     def draw(self, screen):
         for enemy in self.enemies:
